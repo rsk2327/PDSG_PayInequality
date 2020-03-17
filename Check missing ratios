@@ -1,0 +1,97 @@
+import pandas as pd
+
+df1 = pd.read_csv('paynet_data_deidentified_22.csv')
+df2 = pd.read_csv('paynet_data_deidentified_23.csv')
+df3 = pd.read_csv('paynet_data_deidentified_22.csv')
+df4 = pd.read_csv('paynet_data_deidentified_23.csv')
+df5 = pd.read_csv('paynet_data_deidentified_22.csv')
+df6 = pd.read_csv('paynet_data_deidentified_23.csv')
+df7 = pd.read_csv('paynet_data_deidentified_22.csv')
+df8 = pd.read_csv('paynet_data_deidentified_23.csv')
+df9 = pd.read_csv('paynet_data_deidentified_22.csv')
+df10 = pd.read_csv('paynet_data_deidentified_23.csv')
+df11 = pd.read_csv('paynet_data_deidentified_22.csv')
+df12 = pd.read_csv('paynet_data_deidentified_23.csv')
+df13 = pd.read_csv('paynet_data_deidentified_22.csv')
+df14 = pd.read_csv('paynet_data_deidentified_23.csv')
+df15 = pd.read_csv('paynet_data_deidentified_22.csv')
+df16 = pd.read_csv('paynet_data_deidentified_23.csv')
+df17 = pd.read_csv('paynet_data_deidentified_22.csv')
+df18 = pd.read_csv('paynet_data_deidentified_23.csv')
+df19 = pd.read_csv('paynet_data_deidentified_22.csv')
+df20 = pd.read_csv('paynet_data_deidentified_23.csv')
+df21 = pd.read_csv('paynet_data_deidentified_22.csv')
+df22 = pd.read_csv('paynet_data_deidentified_23.csv')
+df23 = pd.read_csv('paynet_data_deidentified_22.csv')
+df24 = pd.read_csv('paynet_data_deidentified_23.csv')
+df25 = pd.read_csv('paynet_data_deidentified_22.csv')
+df26 = pd.read_csv('paynet_data_deidentified_23.csv')
+df27 = pd.read_csv('paynet_data_deidentified_22.csv')
+df28 = pd.read_csv('paynet_data_deidentified_23.csv')
+df29 = pd.read_csv('paynet_data_deidentified_22.csv')
+
+# calculate missing ratio in one time
+dataf = [df1,df2,df3,df4,df5,df6,df7,df8,df9,df10,df11,df12,df13,df14,df15,df16,df17,df18,f19,df20,df21,df22,df23,df24,df25,df26,df27,df28,df29]
+for i in dataf:
+    for j in i.columns:
+        print(u'%s =' %j,(i[j].isna().sum())*100/len(i))
+
+# calculate missing ratio of each file respectively
+for i in df1.columns:
+    print(u'%s =' %i,(df1[i].isna().sum())*100/len(df1))
+for i in df2.columns:
+    print(u'%s =' %i,(df2[i].isna().sum())*100/len(df2))
+for i in df3.columns:
+    print(u'%s =' %i,(df3[i].isna().sum())*100/len(df3))
+for i in df4.columns:
+    print(u'%s =' %i,(df4[i].isna().sum())*100/len(df4))
+for i in df5.columns:
+    print(u'%s =' %i,(df5[i].isna().sum())*100/len(df5))
+for i in df6.columns:
+    print(u'%s =' %i,(df6[i].isna().sum())*100/len(df6))
+for i in df7.columns:
+    print(u'%s =' %i,(df7[i].isna().sum())*100/len(df7))
+for i in df8.columns:
+    print(u'%s =' %i,(df8[i].isna().sum())*100/len(df8))
+for i in df9.columns:
+    print(u'%s =' %i,(df9[i].isna().sum())*100/len(df9))
+for i in df10.columns:
+    print(u'%s =' %i,(df10[i].isna().sum())*100/len(df10))
+for i in df11.columns:
+    print(u'%s =' %i,(df11[i].isna().sum())*100/len(df11))
+for i in df12.columns:
+    print(u'%s =' %i,(df12[i].isna().sum())*100/len(df12))
+for i in df13.columns:
+    print(u'%s =' %i,(df13[i].isna().sum())*100/len(df13))
+for i in df14.columns:
+    print(u'%s =' %i,(df14[i].isna().sum())*100/len(df14))
+for i in df15.columns:
+    print(u'%s =' %i,(df15[i].isna().sum())*100/len(df15))
+for i in df16.columns:
+    print(u'%s =' %i,(df16[i].isna().sum())*100/len(df16))
+for i in df17.columns:
+    print(u'%s =' %i,(df17[i].isna().sum())*100/len(df17))
+for i in df18.columns:
+    print(u'%s =' %i,(df18[i].isna().sum())*100/len(df18))
+for i in df19.columns:
+    print(u'%s =' %i,(df19[i].isna().sum())*100/len(df19))
+for i in df20.columns:
+    print(u'%s =' %i,(df20[i].isna().sum())*100/len(df20))
+for i in df21.columns:
+    print(u'%s =' %i,(df21[i].isna().sum())*100/len(df21))
+for i in df22.columns:
+    print(u'%s =' %i,(df22[i].isna().sum())*100/len(df22))
+for i in df23.columns:
+    print(u'%s =' %i,(df23[i].isna().sum())*100/len(df23))
+for i in df24.columns:
+    print(u'%s =' %i,(df24[i].isna().sum())*100/len(df24))
+for i in df25.columns:
+    print(u'%s =' %i,(df25[i].isna().sum())*100/len(df25))
+for i in df26.columns:
+    print(u'%s =' %i,(df26[i].isna().sum())*100/len(df26))
+for i in df27.columns:
+    print(u'%s =' %i,(df27[i].isna().sum())*100/len(df27))
+for i in df28.columns:
+    print(u'%s =' %i,(df28[i].isna().sum())*100/len(df28))
+for i in df29.columns:
+    print(u'%s =' %i,(df29[i].isna().sum())*100/len(df29))
