@@ -214,9 +214,9 @@ if __name__ == "__main__":
 
         # linear regression of time with three variables
         plt.plot('Total year trend')
-        plt.plot(year_mean['Total Annual Remuneration'],label = "Total Annual Remuneration")
-        plt.plot(year_mean['Total Remuneration Plus'], label = 'Total Remuneration Plus')
-        plt.plot(year_mean['Total Cash'], label = 'Total Cash')
+        plt.plot(all_year, year_mean['Total Annual Remuneration'], label = "Total Annual Remuneration")
+        plt.plot(all_year, year_mean['Total Remuneration Plus'], label = 'Total Remuneration Plus')
+        plt.plot(all_year, year_mean['Total Cash'], label = 'Total Cash')
         plt.savefig('Year Trend')
 
         
@@ -361,12 +361,14 @@ if __name__ == "__main__":
                     plt.legend()
                     # plt.show()
                     plt.savefig(os.path.join(str(curr_year), industry, "all_data_" + temp))
+                else:
+                    year_mean[temp].append(0)
                 plt.clf()
 
             plt.title(curr_industry + ' year trend')
-            plt.plot(year_mean['Total Annual Remuneration'], label = 'Total Annual Remuneration')
-            plt.plot(year_mean['Total Remuneration Plus'], label = 'Total Remuneration Plus')
-            plt.plot(year_mean['Total Cash'], label = 'Total Cash')
+            plt.plot(all_year, year_mean['Total Annual Remuneration'], label = 'Total Annual Remuneration')
+            plt.plot(all_year, year_mean['Total Remuneration Plus'], label = 'Total Remuneration Plus')
+            plt.plot(all_year, year_mean['Total Cash'], label = 'Total Cash')
             plt.savefig(os.path.join(industry, 'Year Trend'))
 
 
