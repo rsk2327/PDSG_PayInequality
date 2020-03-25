@@ -213,11 +213,16 @@ if __name__ == "__main__":
 
 
         # linear regression of time with three variables
-        plt.plot('Total year trend')
+        plt.title('Total year trend')
+        plt.xlabel('Year span')
+        plt.ylabel('Range in linear dollar')
+        plt.xlim(min(all_year) - 1, max(all_year) + 1)
         plt.plot(all_year, year_mean['Total Annual Remuneration'], label = "Total Annual Remuneration")
         plt.plot(all_year, year_mean['Total Remuneration Plus'], label = 'Total Remuneration Plus')
         plt.plot(all_year, year_mean['Total Cash'], label = 'Total Cash')
+        plt.legend()
         plt.savefig('Year Trend')
+        plt.clf()
 
         
     if not sector_analyzed:
@@ -365,7 +370,10 @@ if __name__ == "__main__":
                     year_mean[temp].append(0)
                 plt.clf()
 
-            plt.title(curr_industry + ' year trend')
+            plt.title(temp + ' year trend')
+            plt.xlabel('Year span')
+            plt.ylabel('Range in linear dollar')
+            plt.xlim(min(all_year) - 1, max(all_year) + 1)
             plt.plot(all_year, year_mean['Total Annual Remuneration'], label = 'Total Annual Remuneration')
             plt.plot(all_year, year_mean['Total Remuneration Plus'], label = 'Total Remuneration Plus')
             plt.plot(all_year, year_mean['Total Cash'], label = 'Total Cash')
